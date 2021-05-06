@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernFindSearch.App", "ModernFindSearch.App\ModernFindSearch.App.csproj", "{A6E26831-DD92-46F2-9F2A-814EF08F199E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernFindSearch.Shared", "ModernFindSearch.Shared\ModernFindSearch.Shared.csproj", "{A86AD4E2-88B1-4BD1-9EBD-8631999CD1B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modern.API", "Modern.API\Modern.API.csproj", "{0DDF5CE8-C436-46F8-AA74-156DA489CC31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6E26831-DD92-46F2-9F2A-814EF08F199E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6E26831-DD92-46F2-9F2A-814EF08F199E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6E26831-DD92-46F2-9F2A-814EF08F199E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6E26831-DD92-46F2-9F2A-814EF08F199E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A86AD4E2-88B1-4BD1-9EBD-8631999CD1B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A86AD4E2-88B1-4BD1-9EBD-8631999CD1B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A86AD4E2-88B1-4BD1-9EBD-8631999CD1B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A86AD4E2-88B1-4BD1-9EBD-8631999CD1B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DDF5CE8-C436-46F8-AA74-156DA489CC31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DDF5CE8-C436-46F8-AA74-156DA489CC31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DDF5CE8-C436-46F8-AA74-156DA489CC31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DDF5CE8-C436-46F8-AA74-156DA489CC31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96BA2BB8-2882-4A01-BD08-62323256FAEE}
+	EndGlobalSection
+EndGlobal

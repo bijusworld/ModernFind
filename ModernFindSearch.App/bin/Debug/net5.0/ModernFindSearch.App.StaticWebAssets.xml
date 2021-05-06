@@ -1,0 +1,4 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App\ModernFindSearch.App\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App\ModernFindSearch.App\obj\Debug\net5.0\scopedcss\bundle\" />
+</StaticWebAssets>

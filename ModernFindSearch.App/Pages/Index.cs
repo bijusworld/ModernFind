@@ -1,25 +1,32 @@
-﻿using ModernFindSearch.Shared;
+﻿using Microsoft.AspNetCore.Components;
+using ModernFindSearch.Shared;
 using System;
 
 namespace ModernFindSearch.App.Pages
 {
     public partial class Index
     {
-        private string CurrentValue { get; set; } = String.Empty;
-        private Customer Customer { get; set; } = new Customer();
+        private string findCustomer { get; set; } = String.Empty;
+        private string searchText { get; set; } = String.Empty;
+        private Customer customer { get; set; } = new Customer();
 
-        public void Button_Click()
+        [Inject]
+        public NavigationManager navigationManager { get; set; }
+
+        public void FindCustomer()
         {
-            if (int.Parse(CurrentValue) > 0)
-                Customer.CustomerId = (int.Parse(CurrentValue));
+            if (int.Parse(findCustomer) > 0)
+                customer.CustomerId = (int.Parse(findCustomer));
             else
-                Customer.CustomerId = 0;
+                customer.CustomerId = 0;
             
-            navigationManager.NavigateTo($"findcustomer/{Customer.CustomerId}", false);
-
+            navigationManager.NavigateTo($"findcustomer/{customer.CustomerId}", false);
         }
 
-
-
+        public void SearchCustomer()
+        {
+            if (!string.IsNullOrWhiteSpace(searchText))
+                navigationManager.NavigateTo($"searchcustomer/{searchText}", false); 
+        }
     }
 }

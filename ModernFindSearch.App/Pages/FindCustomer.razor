@@ -2,15 +2,24 @@
 
 @using ModernFindSearch.Shared
 
-<h1>FindCustomer</h1>
-@*@if (Saved)
-{*@
-    <h3 class="page-title">Details for @Customer.CustomerName @Customer.CustomerCategory</h3>
-    <div class="alert @StatusClass">@Message</div>
-@*}
-else
-{
-    <div class="alert @StatusClass">@Message</div>
-}*@
+<h3>Find Customer</h3>
+<div><br/></div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Customer Name</th>
+            <th>Category</th>
+            <th>Customer Details</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>@customer.CustomerName</td>
+                <td>@customer.CustomerCategory</td>
+                <td>@customer.Street, @customer.City, @customer.PostCode </td>
+            </tr>
+    </tbody>
+</table>
+
 <a class="btn btn-outline-primary" @onclick="@NavigateToHome">Home</a>
 

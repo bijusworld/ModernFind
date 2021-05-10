@@ -1,11 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Modern.API.Models;
 using ModernFindSearch.Shared;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace Modern.API.Controllers
 {
@@ -13,16 +11,25 @@ namespace Modern.API.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
-        private List<Customer> _customers = new List<Customer> {
-                new Customer {CustomerId = 1, CustomerCategory = CustomerCategory.B2B, CustomerName = "XYZ Business Ltd.", Street = "Elvis Lane", PostCode = "TW16", City = "London"},
-                new Customer {CustomerId = 2, CustomerCategory = CustomerCategory.B2C, CustomerName = "ABC Informatics Ltd.", Street = "Bankers street", PostCode = "TW03", City = "London"},
-        };
-        public Customer Customer { get; set; } = new Customer();
-        private readonly ICustomerRepository _customerRepository;
         public CustomerController(ICustomerRepository customerRepository)
         {
             _customerRepository = customerRepository;
         }
+
+        public Customer customer { get; set; } = new Customer();
+        public IEnumerable<Customer> customers { get; set; }
+        private readonly ICustomerRepository _customerRepository;
+
+        private List<Customer> _customers = new List<Customer> {
+            new Customer {CustomerId = 1, CustomerCategory = CustomerCategory.B2B, CustomerName = "XYZ Business Ltd.", Street = "Elvis Lane", PostCode = "TW16", City = "London"},
+            new Customer {CustomerId = 2, CustomerCategory = CustomerCategory.B2C, CustomerName = "ABC Informatics Ltd.", Street = "Bankers street", PostCode = "TW03", City = "Cardiff"},
+            new Customer {CustomerId = 3, CustomerCategory = CustomerCategory.B2B, CustomerName = "The Bus Company", Street = "Bankers street", PostCode = "TW05", City = "London"},
+            new Customer {CustomerId = 4, CustomerCategory = CustomerCategory.B2C, CustomerName = "TBC Company", Street = "Bankers street", PostCode = "TW15", City = "Birmingham"},
+            new Customer {CustomerId = 5, CustomerCategory = CustomerCategory.B2B, CustomerName = "Nice Silks", Street = "Bankers street", PostCode = "TW05", City = "London"},
+            new Customer {CustomerId = 6, CustomerCategory = CustomerCategory.B2B, CustomerName = "Lipton tea", Street = "Thames bank", PostCode = "TW05", City = "London"},
+            new Customer {CustomerId = 7, CustomerCategory = CustomerCategory.B2C, CustomerName = "August Company", Street = "Deal curve", PostCode = "TW05", City = "London"},
+            new Customer {CustomerId = 8, CustomerCategory = CustomerCategory.B2B, CustomerName = "The Bus two Company", Street = "Bankers street", PostCode = "TW05", City = "Luton"},
+        };
 
         [HttpGet]
         public IActionResult GetAllCustomers()
@@ -30,36 +37,19 @@ namespace Modern.API.Controllers
             return Ok(_customerRepository.GetAllCustomers());
         }
 
-        [HttpGet("{customerId:int}")]
-        public Customer GetCustomer(int customerId)
+        [HttpGet("{id:int}")]
+        public Customer GetCustomer(int id)
         {
-            //return _customers.Where(c => c.CustomerId == customerId);
-            //return Ok(_customerRepository.GetCustomerById(id));
-            Customer = _customers.FirstOrDefault(c => c.CustomerId == customerId);
-            return Customer;
-
+            var customer = _customers.FirstOrDefault(c => c.CustomerId == id);
+            return customer;
         }
 
-
         [HttpPost]
-        public IActionResult AddCustomer([FromBody] Customer customer)
+        public string SearchCustomers([FromBody] string searchText)
         {
-            if (customer == null)
-                return BadRequest();
-
-            if (customer.CustomerName == string.Empty)
-            {
-                ModelState.AddModelError("Name", "The company name shouldn't be empty");
-            }
-
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var createdCustomer = _customerRepository.AddCustomer(customer);
-
-            return Created("customer", createdCustomer);
-            //var createdCustomer = customer;
-            //return customer;
+            customers = _customers.Where(c => c.CustomerName.ToLower().Contains(searchText.ToLower()));
+            var searchResultJson = JsonSerializer.Serialize(customers);
+            return searchResultJson;
         }
     }
 }

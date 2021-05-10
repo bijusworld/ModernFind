@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JUBIWORKS\\Books\\PluralSight\\Blazor\\WorkArea\\02\\ModernFindSearch.App\\ModernFindSearch.Shared\\ModernFindSearch.Shared.csproj",
+      "projectUniqueName": "C:\\JUBIWORKS\\Books\\PluralSight\\Blazor\\WorkArea\\02\\ModernFindSearch.App\\ModernFind\\ModernFindSearch.Shared\\ModernFindSearch.Shared.csproj",
       "projectName": "ModernFindSearch.Shared",
-      "projectPath": "C:\\JUBIWORKS\\Books\\PluralSight\\Blazor\\WorkArea\\02\\ModernFindSearch.App\\ModernFindSearch.Shared\\ModernFindSearch.Shared.csproj",
+      "projectPath": "C:\\JUBIWORKS\\Books\\PluralSight\\Blazor\\WorkArea\\02\\ModernFindSearch.App\\ModernFind\\ModernFindSearch.Shared\\ModernFindSearch.Shared.csproj",
       "packagesPath": "C:\\Users\\bijum\\.nuget\\packages\\",
-      "outputPath": "C:\\JUBIWORKS\\Books\\PluralSight\\Blazor\\WorkArea\\02\\ModernFindSearch.App\\ModernFindSearch.Shared\\obj\\",
+      "outputPath": "C:\\JUBIWORKS\\Books\\PluralSight\\Blazor\\WorkArea\\02\\ModernFindSearch.App\\ModernFind\\ModernFindSearch.Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

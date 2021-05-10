@@ -47,7 +47,8 @@
       "Microsoft.JSInterop.dll": "sha256-114c7Kng5wf2dRo39ix9XLd9gu\/uEVko0oqnNohR3rA=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-YlYt1zT1hT+aqQZN29dDxRiK4W\/IlVEC3wpLUTx9jtY=",
       "Microsoft.Win32.SystemEvents.dll": "sha256-56MWX7GCuiW+O0EPzkUo0jj6T\/mhpVB6x+UFQtaS2qE=",
-      "Newtonsoft.Json.dll": "sha256-etsgJYQb32kqVnEuCK\/nXhcwxx1keKj+1XWs1DJRpmI=",
+      "Newtonsoft.Json.dll": "sha256-cs8pHUurDt0IqbB8YXPh560au3q3J\/1wRL9jBddRVmE=",
+      "RestSharp.dll": "sha256-QT0l+ZDfqgJ0kytnRiRBPNTkeJ+ybXB7jJFK82yP0kI=",
       "System.Configuration.ConfigurationManager.dll": "sha256-Rmj4lST8tNcZUOCtfg1W5eXbLHDjla1J99tqgWTMUNY=",
       "System.Drawing.Common.dll": "sha256-E+\/s4U4Xt\/iFr\/+Dd7ZSqXXAOJZKgnOAW4C5r7OPcHc=",
       "System.IdentityModel.Tokens.Jwt.dll": "sha256-ZOy7bFhNmzOUzlGe51re6A1KtU\/+uqqEI6CPEFs0ye4=",
@@ -221,13 +222,13 @@
       "mscorlib.dll": "sha256-Fi+LybwHL\/VGD\/09OxxtYlT6exn9xVU+LdojZ9juR2c=",
       "netstandard.dll": "sha256-P8xX0ad1hKyWWbBxiXl3cYokFlDiuXwp3pqoYatH0kk=",
       "System.Private.CoreLib.dll": "sha256-2km83sNUTrumGJYdDzsN8RnJqv00vKWLCCh0UGajTB4=",
-      "ModernFindSearch.Shared.dll": "sha256-fpjWTBuc7zLFHqokOkMz1d0NMts45TxfSBf7\/lCQTXs=",
-      "ModernFindSearch.App.dll": "sha256-iUDX+gGT9oz8zKO7QW\/ptXq2iWkxcoCczfYPi12S7RI="
+      "ModernFindSearch.Shared.dll": "sha256-R4dPylNjh7VTiPlOP5g0+\/0D4DotGqfAGVtgxgOy80g=",
+      "ModernFindSearch.App.dll": "sha256-BxpaLCvnLJOA+HhehvASBJcwSwuo+q4KjTn1+s7TD24="
     },
     "lazyAssembly": null,
     "pdb": {
-      "ModernFindSearch.Shared.pdb": "sha256-23\/kcYtbv6ibK5v0EoK4qtfDNpm66U\/Bt5ojpMZ9YfE=",
-      "ModernFindSearch.App.pdb": "sha256-n+ldYayUIRwWFC+deZYSEwoGV430dWS2U8X8e214b3M="
+      "ModernFindSearch.Shared.pdb": "sha256-vnzp8gToZufiFxDZxr1SmBwrn5ru4SCBzou6HdYyHJ0=",
+      "ModernFindSearch.App.pdb": "sha256-iE3CEeFFYcWkbSCrf0ADUQ2pFV6dhxCRG2byaid5G7M="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ibxaSjW7s3aLVssChknhzCpgMTHGu4D48Q9OLP3dfe8=",

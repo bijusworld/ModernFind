@@ -10,3 +10,15 @@ C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App\ModernFin
 C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App\ModernFindSearch.Shared\obj\Debug\net5.0\ref\ModernFindSearch.Shared.dll
 C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App\ModernFindSearch.Shared\obj\Debug\net5.0\ModernFindSearch.Shared.pdb
 C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App\ModernFindSearch.Shared\obj\Debug\net5.0\ModernFindSearch.Shared.csprojAssemblyReference.cache
+C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App.Local\ModernFindSearch.Shared\bin\Debug\net5.0\ModernFindSearch.Shared.deps.json
+C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App.Local\ModernFindSearch.Shared\bin\Debug\net5.0\ModernFindSearch.Shared.dll
+C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App.Local\ModernFindSearch.Shared\bin\Debug\net5.0\ref\ModernFindSearch.Shared.dll
+C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App.Local\ModernFindSearch.Shared\bin\Debug\net5.0\ModernFindSearch.Shared.pdb
+C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App.Local\ModernFindSearch.Shared\obj\Debug\net5.0\ModernFindSearch.Shared.csprojAssemblyReference.cache
+C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App.Local\ModernFindSearch.Shared\obj\Debug\net5.0\ModernFindSearch.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App.Local\ModernFindSearch.Shared\obj\Debug\net5.0\ModernFindSearch.Shared.AssemblyInfoInputs.cache
+C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App.Local\ModernFindSearch.Shared\obj\Debug\net5.0\ModernFindSearch.Shared.AssemblyInfo.cs
+C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App.Local\ModernFindSearch.Shared\obj\Debug\net5.0\ModernFindSearch.Shared.csproj.CoreCompileInputs.cache
+C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App.Local\ModernFindSearch.Shared\obj\Debug\net5.0\ModernFindSearch.Shared.dll
+C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App.Local\ModernFindSearch.Shared\obj\Debug\net5.0\ref\ModernFindSearch.Shared.dll
+C:\JUBIWORKS\Books\PluralSight\Blazor\WorkArea\02\ModernFindSearch.App.Local\ModernFindSearch.Shared\obj\Debug\net5.0\ModernFindSearch.Shared.pdb

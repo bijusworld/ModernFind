@@ -8,6 +8,7 @@ namespace Modern.API.Models
 {
     public interface ICustomerRepository
     {
+        IEnumerable<Customer> SearchCustomers(string searchText);
         IEnumerable<Customer> GetAllCustomers();
         Customer GetCustomerById(int customerId);
         Customer AddCustomer(Customer customer);

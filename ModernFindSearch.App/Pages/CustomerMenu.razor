@@ -1,0 +1,21 @@
+﻿@page "/CustomerMenu"
+@using ModernFindSearch.Shared
+<h3>Customer Search</h3>
+<div><br /></div>
+<form name="formOne" method="post">
+    <div>
+        Customer ID :
+        <input type="text" @bind="@findCustomer" @oninput="@((e) => { findCustomer=(string)e.Value;})" />
+        <input type="submit" value="  Find  " placeholder="Find" @onclick="FindCustomer" />
+    </div>
+    <br /><br />
+    <div>
+        Search Customer :
+        <input type="text" @bind="@searchText" @oninput="@((e) => { searchText=(string)e.Value;})" />
+        <input type="submit" value="Search" placeholder="Search" @onclick="SearchCustomer" />
+    </div>
+</form>
+
+
+
+

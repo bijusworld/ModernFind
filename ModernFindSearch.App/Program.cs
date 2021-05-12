@@ -14,6 +14,7 @@ namespace ModernFindSearch.App
             builder.RootComponents.Add<App>("#app");
 
             builder.Services.AddHttpClient<ICustomerDataService, CustomerDataService>(client => client.BaseAddress = new Uri("https://localhost:44327/"));
+            builder.Services.AddHttpClient<IProductDataService, ProductDataService>(client => client.BaseAddress = new Uri("https://localhost:44327"));
 
             await builder.Build().RunAsync();
         }

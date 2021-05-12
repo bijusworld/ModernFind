@@ -1,0 +1,41 @@
+﻿@page "/productlist"
+@page "/productlist/{Filter}"
+<h3>ProductList</h3>
+
+@if (Products == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @*<table class="table">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Code</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Products)
+            {
+                <tr>
+                    <td>@product.ProductId</td>
+                    <td>@product.ProductCode</td>
+                    <td>@product.ProductDescription</td>
+                    <td>@product.SellPrice</td>
+                </tr>
+            }*@
+    <Pager TItem="ModernFindSearch.Shared.Product" List="Products">
+        <tr>
+            <td>@context.ProductId</td>
+            <td>@context.ProductCode</td>
+            <td>@context.ProductDescription</td>
+            <td>@context.SellPrice</td>
+        </tr>
+    </Pager>
+    @*</tbody>
+    </table>*@
+    <a class="btn btn-outline-primary" @onclick="@NavigateToProductMenu">Product Menu</a>
+}

@@ -1,0 +1,121 @@
+@typeparam TItem
+
+<div class="row d-flex col-9">
+    <div class="justify-content-center">
+
+        @if (List != null)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Code</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in DisplayList)
+                    {
+                        @ChildContent(item)
+                    }
+                </tbody>
+            </table>
+        }
+
+        @if (PageCount > 1 && List.Count > PageSize)
+        {
+            <ul class="pagination justify-content-center">
+                <li><button @onclick="@(() => ChangePage(1))" class="btn">&laquo;</button></li>
+
+                @for (var i = StartIndex; i <= FinishIndex; i++)
+                {
+                    var currentIndex = i;
+                    @if (i == CurrentPage)
+                    {
+                        <li class="page-item active"><span class="btn">@i</span></li>
+                    }
+                    else
+                    {
+                        <li class="page-item"><button class="btn page-link" @onclick="@(() => ChangePage(currentIndex))">@i</button></li>
+                    }
+                }
+
+                <li><button @onclick="@(() => ChangePage(PageCount))" class="btn">&raquo;</button></li>
+            </ul>
+        }
+    </div>
+    <select class="custom-select offset-1 col-1 ml-auto" bind="@PageSize" @onchange="@(e => ChangePageSize(e))">
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+    </select>
+</div>
+
+@code {
+    [Parameter]
+    public List<TItem> List { get; set; }
+
+    public List<TItem> DisplayList { get; set; } = new List<TItem>();
+
+    [Parameter]
+    public RenderFragment<TItem> ChildContent { get; set; }
+
+    //[Parameter]
+    //public Action<List<TItem>> DisplayChanged { get; set; }
+
+    //[Parameter]
+    //public Action<bool> Rendered { get; set; }
+
+    private int PageSize { get; set; } = 10;
+    private int CurrentPage { get; set; } = 1;
+    private int StartIndex { get; set; }
+    private int FinishIndex { get; set; }
+    private int PageCount { get; set; }
+
+    //protected override void OnAfterRender(bool firstRender)
+    //{
+    //  base.OnAfterRender(firstRender);
+    //  Rendered?.Invoke(true);
+    //}
+
+    private void ChangePageSize(ChangeEventArgs e)
+    {
+        PageSize = int.Parse(e.Value.ToString());
+        ChangePage(1);
+    }
+
+    private void ChangeDisplay()
+    {
+        DisplayList = List
+                .Skip((CurrentPage - 1) * PageSize)
+                .Take(PageSize)
+                .ToList();
+    }
+
+    protected override void OnParametersSet()
+    {
+        // Edited
+        ChangePage(1);
+    }
+
+    protected void ChangePage(int page)
+    {
+        CurrentPage = page;
+        ResetIndex();
+        ChangeDisplay();
+    }
+
+    private void ResetIndex()
+    {
+        PageCount = List.Count / PageSize;
+
+        if (List.Count % PageSize > 0)
+        {
+            PageCount++;
+        }
+
+        StartIndex = Math.Max(CurrentPage - 5, 1);
+        FinishIndex = Math.Min(CurrentPage + 5, PageCount);
+    }
+}

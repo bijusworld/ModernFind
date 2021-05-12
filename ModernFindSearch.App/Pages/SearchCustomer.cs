@@ -21,9 +21,9 @@ namespace ModernFindSearch.App.Pages
             customers = await CustomerDataService.SearchCustomers(searchText.ToLower());
         }
 
-        protected void NavigateToHome()
+        protected void NavigateToCustomerMenu()
         {
-            NavigationManager.NavigateTo("/");
+            NavigationManager.NavigateTo("/CustomerMenu");
         }
 
     }

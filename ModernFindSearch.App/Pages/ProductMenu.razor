@@ -1,0 +1,12 @@
+﻿@page "/ProductMenu"
+@using ModernFindSearch.Shared
+<h3>Product Search</h3>
+<div><br /></div>
+<EditForm Model="@inputFilter" OnValidSubmit="SubmitFilter">
+    <div class="form-group">
+        <label for="filter">Filter: </label>
+        <InputText id="filter" class="form-control" @bind-Value="@inputFilter.ProductReference" placeholder="Enter Filter"></InputText>
+        @*<InputCheckbox id="reload" class="form-check" @bind-Value="@inputFilter.Reload"></InputCheckbox>*@
+    </div>
+    <button type="submit" class="btn btn-primary edit-btn">Submit</button>
+</EditForm>

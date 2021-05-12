@@ -19,11 +19,12 @@ namespace ModernFindSearch.App.Pages
         protected override async Task OnInitializedAsync()
         {
             customer = await CustomerDataService.GetCustomer(int.Parse(customerId));
+            var test = customer;
         }
 
-        protected void NavigateToHome()
+        protected void NavigateToCustomerMenu()
         {
-            NavigationManager.NavigateTo("/");
+            NavigationManager.NavigateTo("/CustomerMenu");
         }
     }
 }
